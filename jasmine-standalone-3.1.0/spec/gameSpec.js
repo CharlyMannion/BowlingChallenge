@@ -16,6 +16,10 @@ describe("Game", function(){
       game.scoreCard = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
       expect(game.score()).toEqual(0);
     });
+    it("should add the all the scores for each frame", function (){
+      game.scoreCard = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+      expect(game.score()).toEqual(20);
+    })
   });
 
 });
