@@ -10,3 +10,7 @@ Game.prototype.score = function(scoreCard) {
   var sum = (this.scoreCard.reduce(reducer));
   return sum
 }
+
+Game.prototype.bowlBall = function(num) {
+  this.scoreCard.push(num)
+}

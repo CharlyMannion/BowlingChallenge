@@ -22,4 +22,16 @@ describe("Game", function(){
     });
   });
 
+  describe("bowl a ball", function(){
+    it("bowling a ball should add a number to the game'\s scoreCard", function(){
+      // game = new Game
+      console.log(game)
+      var rollOneScore = 6
+      game.bowlBall(rollOneScore)
+      console.log(game.scoreCard)
+      console.log(game)
+      expect(game.scoreCard).toContain(6)
+    });
+  });
+
 });
