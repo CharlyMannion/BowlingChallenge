@@ -22,16 +22,19 @@ describe("Game", function(){
     });
   });
 
-  describe("bowl a ball", function(){
-    it("bowling a ball should add a number to the game'\s scoreCard", function(){
-      // game = new Game
-      console.log(game)
+  describe("bowling balls with basic scores", function(){
+    it("bowling the first ball should add a number to the game'\s scoreCard", function(){
       var rollOneScore = 6
       game.bowlBall(rollOneScore)
-      console.log(game.scoreCard)
-      console.log(game)
       expect(game.scoreCard).toContain(6)
     });
+    it("should add multiple balls to the game'\s scoreCard", function(){
+      var times = 20;
+      for(var i=0; i < times; i++){
+        game.bowlBall(2)
+      }
+      expect(game.scoreCard).toEqual([2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2])
+    })
   });
 
 });
